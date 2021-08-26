@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1481651536 source:d:\code forces\a. helpful maths\main.cpp
+	<iostream>
+	<string>
+	<algorithm>
+

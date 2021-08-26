@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1472454245 source:d:\olampiad cpp\parantez-motabar\main.cpp
+	<iostream>
+	<stack>
+	<string>
+

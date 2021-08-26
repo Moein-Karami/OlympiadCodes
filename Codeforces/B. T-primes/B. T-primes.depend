@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1483891468 source:d:\code forces\b. t-primes\main.cpp
+	<iostream>
+	<cmath>
+

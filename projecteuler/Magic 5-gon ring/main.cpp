@@ -1,0 +1,178 @@
+#include <bits/stdc++.h>
+#define int long long int
+using namespace std;
+const int inf=1e9;
+main()
+{
+    vector<int> v;
+    v.push_back(inf);
+    int ans=0;
+    for(int i=1;i<=10;i++)
+        v.push_back(i);
+    do{
+        int x=v[6]+v[1]+v[2];
+        if(v[7]+v[2]+v[3]!=x)
+            continue;
+        if(v[8]+v[3]+v[4]!=x)
+            continue;
+        if(v[9]+v[4]+v[5]!=x)
+            continue;
+        if(v[10]+v[5]+v[1]!=x)
+            continue;
+        bool b=1;
+        for(int i=6;i<=10;i++)
+            if(v[i]==10)
+                b=0;
+        if(b)
+            continue;
+            int id=6;
+        for(int i=7;i<=10;i++)
+            if(v[id]>v[i])
+            id=i;
+        int s=0;
+        if(id==6)
+        {
+            if(v[6]==10)
+            s*=10;
+            s=s*10+v[6];
+            s=s*10+v[1];
+            s=s*10+v[2];
+            if(v[7]==10)
+                s*=10;
+            s=s*10+v[7];
+            s=s*10+v[2];
+            s=s*10+v[3];
+            if(v[8]==10)
+                s*=10;
+            s=s*10+v[8];
+            s=s*10+v[3];
+            s=s*10+v[4];
+            if(v[9]==10)
+                s*=10;
+            s=s*10+v[9];
+            s=s*10+v[4];
+            s=s*10+v[5];
+            if(v[10]==10)
+                s*=10;
+            s=s*10+v[10];
+            s=s*10+v[5];
+            s=s*10+v[1];
+        }
+        if(id==7)
+        {
+            if(v[7]==10)
+                s*=10;
+            s=s*10+v[7];
+            s=s*10+v[2];
+            s=s*10+v[3];
+            if(v[8]==10)
+                s*=10;
+            s=s*10+v[8];
+            s=s*10+v[3];
+            s=s*10+v[4];
+            if(v[9]==10)
+                s*=10;
+            s=s*10+v[9];
+            s=s*10+v[4];
+            s=s*10+v[5];
+            if(v[10]==10)
+                s*=10;
+            s=s*10+v[10];
+            s=s*10+v[5];
+            s=s*10+v[1];
+            if(v[6]==10)
+            s*=10;
+            s=s*10+v[6];
+            s=s*10+v[1];
+            s=s*10+v[2];
+        }
+        if(id==8)
+        {
+            if(v[8]==10)
+                s*=10;
+            s=s*10+v[8];
+            s=s*10+v[3];
+            s=s*10+v[4];
+            if(v[9]==10)
+                s*=10;
+            s=s*10+v[9];
+            s=s*10+v[4];
+            s=s*10+v[5];
+            if(v[10]==10)
+                s*=10;
+            s=s*10+v[10];
+            s=s*10+v[5];
+            s=s*10+v[1];
+            if(v[6]==10)
+            s*=10;
+            s=s*10+v[6];
+            s=s*10+v[1];
+            s=s*10+v[2];
+            if(v[7]==10)
+                s*=10;
+            s=s*10+v[7];
+            s=s*10+v[2];
+            s=s*10+v[3];
+        }
+        if(id==9)
+        {
+            if(v[9]==10)
+                s*=10;
+            s=s*10+v[9];
+            s=s*10+v[4];
+            s=s*10+v[5];
+            if(v[10]==10)
+                s*=10;
+            s=s*10+v[10];
+            s=s*10+v[5];
+            s=s*10+v[1];
+            if(v[6]==10)
+            s*=10;
+            s=s*10+v[6];
+            s=s*10+v[1];
+            s=s*10+v[2];
+            if(v[7]==10)
+                s*=10;
+            s=s*10+v[7];
+            s=s*10+v[2];
+            s=s*10+v[3];
+            if(v[8]==10)
+                s*=10;
+            s=s*10+v[8];
+            s=s*10+v[3];
+            s=s*10+v[4];
+        }
+        if(id==10)
+        {
+            if(v[10]==10)
+                s*=10;
+            s=s*10+v[10];
+            s=s*10+v[5];
+            s=s*10+v[1];
+            if(v[6]==10)
+            s*=10;
+            s=s*10+v[6];
+            s=s*10+v[1];
+            s=s*10+v[2];
+            if(v[7]==10)
+                s*=10;
+            s=s*10+v[7];
+            s=s*10+v[2];
+            s=s*10+v[3];
+            if(v[8]==10)
+                s*=10;
+            s=s*10+v[8];
+            s=s*10+v[3];
+            s=s*10+v[4];
+            if(v[9]==10)
+                s*=10;
+            s=s*10+v[9];
+            s=s*10+v[4];
+            s=s*10+v[5];
+        }
+        ans=max(ans,s);
+
+    }while(next_permutation(v.begin(),v.end()));
+    cout<<ans;
+    return 0;
+}

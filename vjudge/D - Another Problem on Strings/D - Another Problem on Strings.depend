@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1478545344 source:d:\vjudge\d - another problem on strings\main.cpp
+	<iostream>
+	<string>
+	<utility>
+
